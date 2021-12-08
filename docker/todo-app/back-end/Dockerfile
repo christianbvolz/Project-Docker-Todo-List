@@ -5,4 +5,4 @@ RUN npm install
 ADD node_modules.tar.gz /todo-app
 COPY . .
 EXPOSE 3001
-CMD npm start
+ENTRYPOINT  ["npm", "start"]

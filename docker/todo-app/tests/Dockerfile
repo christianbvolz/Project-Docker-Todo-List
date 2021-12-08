@@ -1,8 +1,7 @@
-FROM node:14-alpine
+FROM mjgargani/puppeteer:trybe1.0
 WORKDIR /todo-app/front-end/
 COPY package*.json ./
 RUN npm install
 ADD node_modules.tar.gz /todo-app
 COPY . .
-EXPOSE 3000
 ENTRYPOINT  ["npm", "start"]
